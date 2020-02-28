@@ -1,0 +1,21 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
+import { AppComponent } from './app.component';
+
+import { CoursesComponent } from './courses.component';
+import {CoursesService} from './courses.service';
+import { EmailService } from './email.service';
+import { AuthorsComponent } from './authors/authors.component';
+import { AuthorService } from './authors/author.service';
+
+
+
+@NgModule({
+  imports:      [ BrowserModule, FormsModule ],
+  declarations: [ AppComponent, CoursesComponent, AuthorsComponent],
+  bootstrap:    [ AppComponent ],
+  providers:[ CoursesService, EmailService, AuthorService] 
+})
+export class AppModule { }
