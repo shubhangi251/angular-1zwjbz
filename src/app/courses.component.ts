@@ -8,14 +8,18 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'courses',
   template: `
-  {{ text |summary}}
-  <h2>hii</h2>
-  <span class="glyphicon glyphicon-envelope" > </span>
+ 
+  <span class="[(ngModel)]=select (click)="onPress()" "></span> 
   `
 
 
 })
 export class CoursesComponent
 {
-text= `OLoreuihcnbm jgakjsfuy jdfhgakjhgdfk sdjfgjhkg djfkgjkfg sdjkfgjhgdfkj sdgfkjhsgdfj jgdfkjg`
+  select='glyphicon glyphicon-envelope-empty';
+onPress()
+{
+this.select='glyphicon glyphicon-envelope';
+}
+
 }
