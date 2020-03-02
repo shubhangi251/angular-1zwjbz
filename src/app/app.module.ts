@@ -17,7 +17,8 @@ import { AuthorService } from './authors/author.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, CoursesComponent, AuthorsComponent],
+  declarations: [ AppComponent, CoursesComponent, AuthorsComponent,
+  SummaryPipe],
   bootstrap:    [ AppComponent ],
   providers:[ CoursesService, EmailService, AuthorService] 
 })
