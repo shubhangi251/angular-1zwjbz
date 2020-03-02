@@ -1,9 +1,12 @@
 
 
 
-import {Component} from '@angular/core';
+import {Component,Input,Output,EventEmitter} from '@angular/core';
 
-
+ export interface SelectedChangedEventArgs
+{
+  newValue:boolean
+}
 //Decorative function
 @Component({
   selector: 'courses',
@@ -15,14 +18,19 @@ import {Component} from '@angular/core';
   (click)="onPress()"
   ></span>`,  
   })
+  
+  
 export class CoursesComponent
 {
-  isSelected:boolean;
+  @Input('isFavorite') isSelected:boolean;
+  @Output() change=  new EventEmitter();
   
  
   onPress()
   {
     this.isSelected=!this.isSelected;
+    this.change.emit({newValue:this.isSelected});
   }
-
+ 
+ 
 }
