@@ -7,19 +7,22 @@ import {Component} from '@angular/core';
 //Decorative function
 @Component({
   selector: 'courses',
-  template: `
- 
-  <span class="[(ngModel)]=select (click)="onPress()" "></span> 
-  `
-
-
-})
+    template:`
+    <span 
+  class="glyphicon"
+  [class.glyphicon-star]="isSelected"
+  [class.glyphicon-star-empty]="!isSelected"
+  (click)="onPress()"
+  ></span>`,  
+  })
 export class CoursesComponent
 {
-  select='glyphicon glyphicon-envelope-empty';
-onPress()
-{
-this.select='glyphicon glyphicon-envelope';
-}
+  isSelected:boolean;
+  
+ 
+  onPress()
+  {
+    this.isSelected=!this.isSelected;
+  }
 
 }

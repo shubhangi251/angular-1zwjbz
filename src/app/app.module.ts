@@ -12,13 +12,15 @@ import {SummaryPipe} from
 import { EmailService } from './email.service';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorService } from './authors/author.service';
+import { CorrectcasePipe } from './correctcase.pipe';
 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, CoursesComponent, AuthorsComponent,
-  SummaryPipe],
+  SummaryPipe,
+  CorrectcasePipe],
   bootstrap:    [ AppComponent ],
   providers:[ CoursesService, EmailService, AuthorService] 
 })
