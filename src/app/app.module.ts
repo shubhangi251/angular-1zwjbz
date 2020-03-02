@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 
 import { CoursesComponent } from './courses.component';
 import {CoursesService} from './courses.service';
-import {SummaryPipe} from './summary.pipe';
+import {SummaryPipe} from 
+'./summary.pipe';
 
 import { EmailService } from './email.service';
 import { AuthorsComponent } from './authors/authors.component';
