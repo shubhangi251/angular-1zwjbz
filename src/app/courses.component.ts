@@ -2,18 +2,20 @@
 
 
 import {Component} from '@angular/core';
-import {CoursesService} from './courses.service';
+
 
 //Decorative function
 @Component({
   selector: 'courses',
   template: `
-  {{text|summary}}
+  {{ text |summary}}
+  <h2>hii</h2>
+  <span class="glyphicon glyphicon-envelope" > </span>
   `
 
 
 })
 export class CoursesComponent
 {
-text='OLoreuihcnbm jgakjsfuy jdfhgakjhgdfk sdjfgjhkg djfkgjkfg sdjkfgjhgdfkj sdgfkjhsgdfj jgdfkjg'
+text= `OLoreuihcnbm jgakjsfuy jdfhgakjhgdfk sdjfgjhkg djfkgjkfg sdjkfgjhgdfkj sdgfkjhsgdfj jgdfkjg`
 }
