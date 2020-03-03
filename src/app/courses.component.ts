@@ -3,10 +3,7 @@
 
 import {Component,Input,Output,EventEmitter} from '@angular/core';
 
- export interface SelectedChangedEventArgs
-{
-  newValue:boolean
-}
+ 
 //Decorative function
 @Component({
   selector: 'courses',
@@ -23,7 +20,7 @@ import {Component,Input,Output,EventEmitter} from '@angular/core';
 export class CoursesComponent
 {
   @Input('isFavorite') isSelected:boolean;
-  @Output() change=  new EventEmitter();
+  @Output('correct') change=  new EventEmitter();
   
  
   onPress()
@@ -33,4 +30,8 @@ export class CoursesComponent
   }
  
  
+}
+export interface SelectedChangedEventArgs
+{
+  newValue:boolean
 }

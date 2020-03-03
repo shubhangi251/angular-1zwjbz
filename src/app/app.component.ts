@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {SelectedChangedEventargs} from './courses.component';
+import { SelectedChangedEventArgs } from './courses.component';
 
 @Component({
   selector: 'my-app',
