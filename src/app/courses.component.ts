@@ -16,7 +16,7 @@ import {Component,Input,Output,EventEmitter} from '@angular/core';
   (click)="onPress()"
   ></span>`,  
    styleUrls: [ './courses.component.css' ]
-  })
+   })
 
   
   
