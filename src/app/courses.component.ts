@@ -17,6 +17,7 @@ import {Component,Input,Output,EventEmitter} from '@angular/core';
   })
   
   
+  
 export class CoursesComponent
 {
   @Input('isFavorite') isSelected:boolean;
