@@ -7,6 +7,7 @@ import {Component,Input,Output,EventEmitter} from '@angular/core';
 //Decorative function
 @Component({
   selector: 'courses',
+  
     template:`
     <span 
   class="glyphicon"
@@ -14,7 +15,9 @@ import {Component,Input,Output,EventEmitter} from '@angular/core';
   [class.glyphicon-star-empty]="!isSelected"
   (click)="onPress()"
   ></span>`,  
+   styleUrls: [ './courses.component.css' ]
   })
+
   
   
   
