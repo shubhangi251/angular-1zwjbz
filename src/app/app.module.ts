@@ -13,6 +13,8 @@ import { EmailService } from './email.service';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorService } from './authors/author.service';
 import { CorrectcasePipe } from './correctcase.pipe';
+import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 
 
@@ -21,7 +23,9 @@ import { CorrectcasePipe } from './correctcase.pipe';
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, CoursesComponent, AuthorsComponent,
   SummaryPipe,
-  CorrectcasePipe],
+  CorrectcasePipe,
+  PanelComponent,
+  LikeComponent],
   bootstrap:    [ AppComponent ],
   providers:[ CoursesService, EmailService, AuthorService] 
 })

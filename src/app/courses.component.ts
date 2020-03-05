@@ -15,7 +15,15 @@ import {Component,Input,Output,EventEmitter} from '@angular/core';
   [class.glyphicon-star-empty]="!isSelected"
   (click)="onPress()"
   ></span>`,  
-   styleUrls: [ './courses.component.css' ]
+  
+   styleUrls: [ './courses.component.css' ],styles:[
+   `.glyphicon
+   {
+     color:green;
+   }
+   .glyphicon-star
+   {background:yellow;}` 
+  ]
    })
 
   

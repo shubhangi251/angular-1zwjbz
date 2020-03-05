@@ -1,4 +1,13 @@
+<app-like [likeCount]="post.count" [isSelected]="post.isLiked">
 
-
-<courses [isFavorite]="post.isSelected" (correct)="onSelectedChange($event)"> </courses>
-
+</app-like>
+<div [hidden]="courses.length==0">
+	List of courses
+	<ul>
+		<li *ngFor="let course  of courses">
+			{{course}}
+		</li>
+	</ul>
+</div>
+<div [hidden]="courses.length>0"> No courses
+</div>

@@ -9,12 +9,9 @@ import { SelectedChangedEventArgs } from './courses.component';
 export class AppComponent  {
   name = 'Angular';
   post={
-    title:"Title",
-    isSelected:true
+   count:10,
+    isLiked:false
   }
-   onSelectedChange(eventArgs:SelectedChangedEventArgs)
-  {
-    alert("change recognised"+" "+ eventArgs);
-  }
+  courses=[1,2];
 
 }
