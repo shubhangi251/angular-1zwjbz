@@ -16,6 +16,7 @@ import { CorrectcasePipe } from './correctcase.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
 import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 
 
@@ -27,7 +28,8 @@ import { InputFormatDirective } from './input-format.directive';
   CorrectcasePipe,
   PanelComponent,
   LikeComponent,
-  InputFormatDirective],
+  InputFormatDirective,
+  ZippyComponent],
   bootstrap:    [ AppComponent ],
   providers:[ CoursesService, EmailService, AuthorService] 
 })

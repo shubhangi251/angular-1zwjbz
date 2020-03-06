@@ -1,0 +1,21 @@
+.zippy
+{
+  border: 2px solid rgb(233, 223, 223);  
+   border-radius:2
+   px ;
+   padding: 20px;
+}
+.zippy-heading
+{
+  font-weight: bold;
+  padding: 20px;
+background:yellow;
+cursor:pointer;
+}
+.zippy-content{
+background:green;
+padding: 20px;
+}
+.expandable{
+  background-color: grey;
+}
