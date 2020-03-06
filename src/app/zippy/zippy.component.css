@@ -9,13 +9,16 @@
 {
   font-weight: bold;
   padding: 20px;
-background:yellow;
+
 cursor:pointer;
 }
 .zippy-content{
-background:green;
+
 padding: 20px;
 }
 .expandable{
-  background-color: grey;
+  background-color: rgb(241, 232, 232);
+}
+.glyphicon{
+  float: right;
 }

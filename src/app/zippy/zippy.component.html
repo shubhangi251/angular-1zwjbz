@@ -5,7 +5,8 @@
   (click)="toggle()">
   {{title}} 
   <span class="glyphicon" [ngClass]="{
-    
+    'glyphicon-chevron-up':isExpandable,
+    'glyphicon-chevron-down':!isExpandable
   }"></span>
 </div>
 
