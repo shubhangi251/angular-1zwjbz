@@ -15,6 +15,7 @@ import { AuthorService } from './authors/author.service';
 import { CorrectcasePipe } from './correctcase.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
+import { InputFormatDirective } from './input-format.directive';
 
 
 
@@ -25,7 +26,8 @@ import { LikeComponent } from './like/like.component';
   SummaryPipe,
   CorrectcasePipe,
   PanelComponent,
-  LikeComponent],
+  LikeComponent,
+  InputFormatDirective],
   bootstrap:    [ AppComponent ],
   providers:[ CoursesService, EmailService, AuthorService] 
 })

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SelectedChangedEventArgs } from './courses.component';
+
 
 @Component({
   selector: 'my-app',
@@ -7,11 +7,17 @@ import { SelectedChangedEventArgs } from './courses.component';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
-  post={
-   count:10,
-    isLiked:false
-  }
-  courses=[1,2];
-
+courses;
+onLoad()
+{
+  this.courses=[
+  {id: 1, name:"course1"},
+  {id: 2, name:"course2"},
+  {id: 3, name:"course3"}
+]
+}
+trackCourse(index, course)
+{
+  return course?course.id: undefined;
+}
 }
