@@ -41,18 +41,24 @@
 		<label for="contactMethod">
       ContactMethod
       </label>
-		<select multiple ngModel name="contactMethod" id="contactMethod" class="form-control">
+		<select multiple ngModel name="contactMethodList" id="contactMethodList" class="form-control">
     <option value=""></option>
         <option *ngFor="let method of contactMethods" [value]="method.id ">{{method.name}}</option>
 
       </select>
 	</div>
+   <div class="radio" *ngFor="let methods of contactMethod">
+    <label >
+      <input ngmodel name="contactMethodRadio"   type="radio" [value]="methods.id">{{methods.name}}
+      </label>
+      </div>
 	<div class="checkbox">
 		<label >
       <input type="checkbox" ngModel name="isSubscribed">
       Subscribe to mailing list
       </label>
 	</div>
+ 
 	<p>
 		{{f.value|json}}
 	</p>
