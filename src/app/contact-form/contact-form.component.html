@@ -42,8 +42,8 @@
       ContactMethod
       </label>
 		<select ngModel name="contactMethod" id="contactMethod" class="form-control">
-        <option value="Indore">Indore</option>
-        <option *ngFor="let method of contactMethods" [value]="method.id ">{{method.name}}</option>
+    <option value=""></option>
+        <option *ngFor="let method of contactMethods" [ngValue]="method.id ">{{method.name}}</option>
 
       </select>
 	</div>
