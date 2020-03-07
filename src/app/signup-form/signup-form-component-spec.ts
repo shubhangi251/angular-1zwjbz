@@ -4,7 +4,7 @@ import { SignupFormComponent } from './signup-form.component';
 
 describe('SignupFormComponent', () => {
   let component: SignupFormComponent;
-  let fixture: ComponentFixture<SignupFormComponent>;
+  let fixture: ComponentFixture<SignupFormComponent>; 
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
