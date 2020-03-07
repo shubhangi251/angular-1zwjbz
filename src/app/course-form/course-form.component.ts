@@ -7,15 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseFormComponent  {
 category=[
-  {
-    id:1,name:'Developement'
-  },
+    {id:1, name:'Developement'},
    {
     id:2,name:'Arts'
   }, {
     id:3,name:'FineArts'
   }
 ];
+
  
 
 }

@@ -22,13 +22,13 @@
 		</div>
 	</div>
 
-	<div class="form-group">
+	<div class="form-group" >
 		<label for="category">
       ContactMethod
       </label>
-		<select  ngModel name="category" id="category" class="form-control">
+		<select  ngModel name="category" id="category" class="form-control" >
     <option value=""></option>
-        <option *ngFor="let select of category" [value]="select.id ">{{select.courses}}</option>
+        <option  [value]="select.id " *ngFor="let select of category">{{select.name}}</option>
 
       </select>
 	</div>
