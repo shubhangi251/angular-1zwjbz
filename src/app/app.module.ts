@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
@@ -21,13 +22,14 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { CourseFormComponent } from './course-form/course-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
+import { PostsComponent } from './posts/posts.component';
 
 
 
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ,ReactiveFormsModule],
+  imports:      [ BrowserModule, HttpModule ,FormsModule ,ReactiveFormsModule],
   declarations: [ AppComponent, CoursesComponent, AuthorsComponent,
   SummaryPipe,
   CorrectcasePipe,
@@ -38,8 +40,9 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
   ContactFormComponent,
   CourseFormComponent,
   SignupFormComponent,
-  NewCourseFormComponent],
+  NewCourseFormComponent,
+  PostsComponent],
   bootstrap:    [ AppComponent ],
-  providers:[ CoursesService, EmailService, AuthorService] 
+  providers:[ CoursesService,EmailService, AuthorService] 
 })
 export class AppModule { }
