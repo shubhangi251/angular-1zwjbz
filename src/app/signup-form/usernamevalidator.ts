@@ -6,16 +6,22 @@ if((control.value as string).indexOf('')>=0)
 return{cannotContainSpace:true};
 return null;
   }
-  static shouldBeUnique(control:AbstractControl):ValidationErrors|null
+  static shouldBeUnique(control:AbstractControl):Promise<ValidationErrors|null>
   {
-    setTimeout (()=>  {
+    return new Promise(
+      (resolve,reject) =>
+      {
+setTimeout (()=>  {
      if(control.value=='mosh')
-return{
+resolve({
   shouldBeUnique:true
-};
-return null;
+});
+else
+resolve(null) ;
     },2000);
-return null;
+      }
+    );
+    
   }
   
 }
