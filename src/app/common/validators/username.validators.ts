@@ -8,10 +8,14 @@ return null;
   }
   static shouldBeUnique(control:AbstractControl):ValidationErrors|null
   {
-if(control.value=='mosh')
+    setTimeout (()=>  {
+     if(control.value=='mosh')
 return{
   shouldBeUnique:true
 };
 return null;
+    },2000);
+return null;
   }
+  
 }
