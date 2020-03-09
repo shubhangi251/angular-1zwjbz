@@ -16,7 +16,7 @@ this.posts=response.json();
 });
   }
 
-  createPost(input:HTMLInputElement)
+  createPosts(input:HTMLInputElement)
   {
     let post={title:input.value};
     input.value='';
