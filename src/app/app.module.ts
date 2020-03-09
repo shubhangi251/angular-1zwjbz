@@ -23,6 +23,7 @@ import { CourseFormComponent } from './course-form/course-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { PostsComponent } from './posts/posts.component';
+import { PostService } from './services/post.service';
 
 
 
@@ -43,6 +44,6 @@ import { PostsComponent } from './posts/posts.component';
   NewCourseFormComponent,
   PostsComponent],
   bootstrap:    [ AppComponent ],
-  providers:[ CoursesService,EmailService, AuthorService] 
+  providers:[ CoursesService,EmailService, AuthorService, PostService] 
 })
 export class AppModule { }
