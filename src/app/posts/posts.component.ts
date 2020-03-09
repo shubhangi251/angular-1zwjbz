@@ -26,6 +26,12 @@ this.posts=response.json();
      
     });
   }
+updatePost(post)
+{
+this.http.patch(this.url+'/'+post.id,JSON.stringify({isRead:true})).subscribe(response =>{
+  console.log(response.json());
+})
 
+}
 
 }
