@@ -31,8 +31,16 @@ export class PostsComponent implements OnInit {
         this.posts.splice(0, 0, post);
 
       },
-      error => {
-        alert('An unexpected error occured');
+     (error:Response) => {
+        if(error.status===400)
+        {
+//this.form.setErrors(error.json());
+        }
+        else
+        {
+          alert('An unexpected error occured');
+        }
+        
       });
   }
   updatePosts(post) {
@@ -47,7 +55,7 @@ export class PostsComponent implements OnInit {
 
   }
   deletePosts(post) {
-    this.service.deletePosts(845).subscribe(
+    this.service.deletePosts(post.id).subscribe(
       response => {
         let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
