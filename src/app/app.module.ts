@@ -27,7 +27,7 @@ import { PostsComponent } from './posts/posts.component';
 import { PostService } from './services/post.service';
 import { ErrorService } from './services/error.service';
 
-import { AppErrorHandler } from '../common/AppErrorHandler';
+import { AppErrorHandler } from '../app/common/AppErrorHandler';
 
 
 
