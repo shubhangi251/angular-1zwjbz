@@ -6,35 +6,13 @@ import 'rxjs/add/operator/catch';
 import { AppError} from './../common/app-error';
 import { BadInput} from './../common/bad-input';
 import { NotFoundError} from './../common/not-found-error';
+import {DataService} from './data.service';
 
 @Injectable()
-export class PostService { 
-private url='https://jsonplaceholder.typicode.com/posts';
-  constructor(private http:Http) { }
-getPosts()
-{
-return this.http.get(this.url).catch(this.handleError);
-}
-createPosts(post)
-{
-  return this.http.post(this.url, JSON.stringify(post)).catch(this.handleError);
-}
-updatePosts(post)
-{
- return this.http.patch(this.url + '/' + post.id, JSON.stringify({ isRead: true }))
- .catch(this.handleError);
-}
-deletePosts(id){
-return this.http.delete(this.url + '/' + id)
-.catch(this.handleError);
-}
-private handleError(error:Response)
-{
-    if(error.status===400)
-    return Observable.throw( new BadInput(error.json()) );
-if(error.status ===404)
-  return Observable.throw( new NotFoundError());
+export class PostService extends DataService{ 
+//;
+  constructor('https://jsonplaceholder.typicode.com/posts' , http:Http) {
+super(http);
+   }
 
-  return Observable.throw(new AppError(error));
-}
 }
