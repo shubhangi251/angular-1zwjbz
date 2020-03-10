@@ -27,6 +27,9 @@ import { AppErrorHandler } from './common/app-error-handler';
 import { PostsComponent } from './posts/posts.component';
 import { PostService } from './services/post.service';
 import { ErrorService } from './services/error.service';
+import { FollowersComponent } from './followers/followers.component';
+import { FollowersService } from './services/followers.service';
+import { DatafService } from './services/dataf.service';
 
 
 
@@ -44,9 +47,10 @@ import { ErrorService } from './services/error.service';
   CourseFormComponent,
   SignupFormComponent,
   NewCourseFormComponent,
-  PostsComponent],
+  PostsComponent,
+  FollowersComponent],
   bootstrap:    [ AppComponent ],
-  providers:[ CoursesService,EmailService, AuthorService, PostService, ErrorService,
-  { provide:ErrorHandler, useClass:AppErrorHandler}] 
+  providers:[ CoursesService,EmailService, AuthorService, PostService,FollowersService, ErrorService,
+  { provide:ErrorHandler, useClass:AppErrorHandler, providers: [DatafService]}] 
 })
 export class AppModule { }
