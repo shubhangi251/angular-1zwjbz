@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { ErrorHandler} from '@angular/core';
 
 import { AppComponent } from './app.component';
 
@@ -26,7 +27,7 @@ import { PostsComponent } from './posts/posts.component';
 import { PostService } from './services/post.service';
 import { ErrorService } from './services/error.service';
 
-
+import { AppErrorHandler } from '../common/AppErrorHandler';
 
 
 
@@ -45,6 +46,7 @@ import { ErrorService } from './services/error.service';
   NewCourseFormComponent,
   PostsComponent],
   bootstrap:    [ AppComponent ],
-  providers:[ CoursesService,EmailService, AuthorService, PostService, ErrorService] 
+  providers:[ CoursesService,EmailService, AuthorService, PostService, ErrorService,
+  { provide:ErrorHandler, useClass:AppErrorHandler}] 
 })
 export class AppModule { }
