@@ -23,11 +23,11 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { CourseFormComponent } from './course-form/course-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
+import { AppErrorHandler } from './common/app-error-handler';
 import { PostsComponent } from './posts/posts.component';
 import { PostService } from './services/post.service';
 import { ErrorService } from './services/error.service';
 
-import { AppErrorHandler } from '../app/common/AppErrorHandler';
 
 
 
