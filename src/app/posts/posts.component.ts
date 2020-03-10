@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from './../services/post.service';
-import { AppError,NotFoundError} from './../common';
+import { AppError} from './../common/app-error';
+import { NotFoundError} from './../common/not-found-error';
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
