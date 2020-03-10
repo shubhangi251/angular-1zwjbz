@@ -14,7 +14,10 @@ return this.http.get(this.url);
 }
 createPosts(post)
 {
-  return this.http.post(this.url, JSON.stringify(post))
+  return this.http.post(this.url, JSON.stringify(post)).catch((error:Response)=>{
+    if(error.status===400)
+    return Observable.throw()
+  })
 }
 updatePosts(post)
 {
