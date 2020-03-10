@@ -5,7 +5,7 @@ import 'rxjs/add/operator/catch';
 import { AppError} from './../common/app-error';
 import { NotFoundError} from './../common/not-found-error';
 @Injectable()
-export class PostService {
+export class PostService { 
 private url='https://jsonplaceholder.typicode.com/posts';
   constructor(private http:Http) { }
 getPosts()
