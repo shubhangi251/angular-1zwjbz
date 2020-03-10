@@ -16,30 +16,50 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
     this.service.getPosts().subscribe(response => {
       this.posts = response.json();
+    }, error => {
+      alert('An unexpected error occured');
+      console.log(error);
     });
   }
 
   createPosts(input: HTMLInputElement) {
     let post = { title: input.value };
     input.value = '';
-    this.service.createPosts(post).subscribe(response => {
-      post['id'] = response.json().id;
-      this.posts.splice(0, 0, post);
+    this.service.createPosts(post).subscribe(
+      response => {
+        post['id'] = response.json().id;
+        this.posts.splice(0, 0, post);
 
-    });
+      },
+      error => {
+        alert('An unexpected error occured');
+      });
   }
-  updatePost(post) {
-    this.service.updatePosts(post).subscribe(response => {
-      console.log(response.json());
-    })
+  updatePosts(post) {
+    this.service.updatePosts(post).subscribe(
+      response => {
+        console.log(response.json());
+      },
+      error => {
+        alert('An unexpected error occured');
+      })
 
 
   }
-  deletePost(post) {
-    this.service.deletePosts(post.id).subscribe(response => {
-      let index = this.posts.indexOf(post);
-      this.posts.splice(index, 1);
-    });
+  deletePosts(post) {
+    this.service.deletePosts(845).subscribe(
+      response => {
+        let index = this.posts.indexOf(post);
+        this.posts.splice(index, 1);
+      },
+      (error:Response) => {
+        if(error.status===404)
+        alert('This post has already been delted');
+        else{
+          alert('An unexpected error occured');
+          console.log(error);
+        }
+      });
   }
 
 
